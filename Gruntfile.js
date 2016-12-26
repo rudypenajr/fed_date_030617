@@ -1,6 +1,8 @@
 /* global module:false */
 module.exports = function(grunt) {
 	var port = grunt.option('port') || 8000;
+	var base = grunt.option('base') || '.';
+
 	// Project configuration
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
@@ -11,7 +13,7 @@ module.exports = function(grunt) {
 				' * http://lab.hakim.se/reveal-js\n' +
 				' * MIT licensed\n' +
 				' *\n' +
-				' * Copyright (C) 2015 Hakim El Hattab, http://hakim.se\n' +
+				' * Copyright (C) 2016 Hakim El Hattab, http://hakim.se\n' +
 				' */'
 		},
 
@@ -103,7 +105,7 @@ module.exports = function(grunt) {
 			server: {
 				options: {
 					port: port,
-					base: '.',
+					base: base,
 					livereload: true,
 					open: true
 				}
@@ -117,14 +119,12 @@ module.exports = function(grunt) {
 				'js/**',
 				'lib/**',
 				'images/**',
-				'plugin/**'
+				'plugin/**',
+				'**.md'
 			]
 		},
 
 		watch: {
-			options: {
-				livereload: true
-			},
 			js: {
 				files: [ 'Gruntfile.js', 'js/reveal.js' ],
 				tasks: 'js'
@@ -142,7 +142,13 @@ module.exports = function(grunt) {
 				tasks: 'jade'
 			},
 			html: {
-				files: [ 'index.html']
+				files: [ '*.html']
+			},
+			markdown: {
+				files: [ '*.md' ]
+			},
+			options: {
+				livereload: true
 			}
 		}
 

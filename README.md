@@ -6,21 +6,16 @@ A framework for easily creating beautiful presentations using HTML. [Check out t
 
 Later,[Jason Lengstorf](https://lengstorf.com/) — because he's too lazy to write out HTML longhand —  ported markup authoring to [Jade](http://jade-lang.com).
 
-
 ## Documentation
-
 This project is identical to the original [reveal.js](https://github.com/hakimel/reveal.js) in every way except authoring markup.
-
 
 ### Using Jade
 
 See [Jade's documentation](http://jade-lang.com/reference/).
 
-
 ### Using Reveal.js
 
 See the [reveal.js documentation](https://github.com/hakimel/reveal.js).
-
 
 ## Working with Reveal.js + Jade
 
@@ -115,7 +110,6 @@ block slides
 
 This works because the `slide` mixin checks for `data-markdown` and auto-wraps the slide content with `script(type="text/template")` when found.
 
-
 ### Slides with Attributes
 
 Adding attributes works as expected, whether you're using the `slide` mixin or not:
@@ -136,7 +130,6 @@ block slides
 		p Slide text here.
 ```
 
-
 ### Adding Custom Title and Meta
 
 The `title` block is designed to allow easy updating of the `tite`, as well as the `description` and `author` meta tags.
@@ -153,7 +146,6 @@ block slides
 	//- ...slides go here...
 ```
 
-
 ### Change the Presentation Theme
 
 To change the presentation theme, override the default in the `theme` block:
@@ -167,7 +159,6 @@ block theme
 block slides
 	//- ...slides go here...
 ```
-
 
 ### Adding Custom Stylesheets
 
@@ -186,7 +177,6 @@ block styles
 block slides
 	//- ...slides go here...
 ```
-
 
 ### Overriding Default Scripts
 
@@ -217,7 +207,6 @@ block defaultscripts
 			]
 		});
 ```
-
 
 ### Adding Custom Scripts
 
@@ -258,9 +247,8 @@ block extras
 					github.com/jlengstorf
 ```
 
-
 ## License
 
 MIT licensed
 
-Copyright (C) 2015 Hakim El Hattab, http://hakim.se
+Copyright (C) 2016 Hakim El Hattab, http://hakim.se
