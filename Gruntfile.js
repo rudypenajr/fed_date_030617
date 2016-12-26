@@ -89,15 +89,15 @@ module.exports = function(grunt) {
 			files: [ 'Gruntfile.js', 'js/reveal.js' ]
 		},
 
-		jade: {
+		pug: {
 			compile: {
 				options: {
 					pretty: true,
 					doctype: 'html'
 				},
 				files: {
-					"index.html": "templates/index.jade",
-					"demo.html": "templates/demo.jade"
+					"index.html": "templates/index.pug",
+					"demo.html": "templates/demo.pug"
 				}
 			}
 		},
@@ -139,8 +139,8 @@ module.exports = function(grunt) {
 				tasks: 'css-core'
 			},
 			templates: {
-				files: [ 'templates/**/*.jade' ],
-				tasks: 'jade'
+				files: [ 'templates/**/*.pug' ],
+				tasks: 'pug'
 			},
 			html: {
 				files: [ '*.html']
@@ -162,7 +162,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks( 'grunt-contrib-uglify' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 	grunt.loadNpmTasks( 'grunt-sass' );
-	grunt.loadNpmTasks( 'grunt-contrib-jade' );
+	grunt.loadNpmTasks( 'grunt-contrib-pug' );
 	grunt.loadNpmTasks( 'grunt-contrib-connect' );
 	grunt.loadNpmTasks( 'grunt-autoprefixer' );
 	grunt.loadNpmTasks( 'grunt-zip' );
