@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>reveal.js + Jade - The HTML Presentation Framework</title>
-    <meta name="description" content="A framework for easily creating beautiful presentations using HTML by @hakimel. Ported to Jade by @jlengstorf.">
+    <title>reveal.js + Pug - The HTML Presentation Framework</title>
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML by @hakimel. Ported to Pug by @jlengstorf.">
     <meta name="author" content="Hakim El Hattab">
     <link rel="stylesheet" href="css/reveal.css">
     <link id="theme" rel="stylesheet" href="css/theme/black.css">
@@ -22,11 +22,11 @@
     <div class="reveal">
       <div class="slides">
         <section>
-          <h1>Reveal.js + Jade</h1>
+          <h1>Reveal.js + Pug</h1>
           <h3>A shortcut for faster slideshow authoring.</h3>
           <p><small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / 
               <a href="https://twitter.com/hakimel">@hakimel</a></small></p>
-          <p><small>Ported to <a href="http://jade-lang.com">Jade</a> by 
+          <p><small>Ported to <a href="https://pugjs.org">Pug</a> by 
               <a href="http://lengstorf.com">Jason Lengstorf</a> / 
               <a href="https://twitter.com/jlengstorf">jlengstorf</a>
               </small></p>
@@ -42,7 +42,7 @@
           <section>
             <h2>Vertical slides</h2>
             <p>Slides can be nested inside of each other.</p>
-            <p>Use the <em>Space</em> key to navigate through all slides.</p><br><a href="#" class="navigate-down"><img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"></a>
+            <p>Use the <em>Space</em> key to navigate through all slides.</p><br><a class="navigate-down" href="#"><img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"></a>
           </section>
           <section>
             <h2>Basement Level 1</h2>
@@ -128,7 +128,7 @@
         <section>
           <section data-background="#dddddd">
             <h2>Slide Backgrounds</h2>
-            <p>Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.</p><a href="#" class="navigate-down"><img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"></a>
+            <p>Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.</p><a class="navigate-down" href="#"><img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow"></a>
           </section>
           <section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
             <h2>Image Backgrounds</h2>
@@ -136,7 +136,7 @@
           </section>
           <section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
             <h2>Tiled Backgrounds</h2>
-            <pre><code style="word-wrap: break-word;" class="hljs">+slide(
+            <pre><code class="hljs" style="word-wrap: break-word">+slide(
   data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png"
   data-background-repeat="repeat" 
   data-background-size="100px"
@@ -144,9 +144,9 @@
 </code></pre>
           </section>
           <section data-backround-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
-            <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
+            <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px">
               <h2>Video Backgrounds</h2>
-              <pre><code style="word-wrap: break-word;">+slide(
+              <pre><code style="word-wrap: break-word">+slide(
   data-backround-video="video.mp4,video.webm"
 )
 </code></pre>
@@ -164,14 +164,14 @@
         <section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
           <h2>Background Transitions</h2>
           <p>You can override background transitions per-slide.</p>
-          <pre><code style="word-wrap: break-word;" class="hljs">+slide(
+          <pre><code class="hljs" style="word-wrap: break-word">+slide(
   data-background-transition="zoom"
 )
 </code></pre>
         </section>
         <section>
           <h2>Pretty Code</h2>
-          <pre><code data-trim contenteditable class="hljs">function linkify( selector ) {
+          <pre><code class="hljs" data-trim contenteditable>function linkify( selector ) {
   if( supports3DTransforms ) {
 
     var nodes = document.querySelectorAll( selector );
@@ -261,7 +261,7 @@
         <section>
           <h2>Export to PDF</h2>
           <p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
-          <iframe src="//www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen></iframe>
+          <iframe src="//www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%" allowfullscreen></iframe>
         </section>
         <section>
           <h2>Global State</h2>
@@ -272,7 +272,7 @@
         <section data-state="customevent">
           <h2>State Events</h2>
           <p>Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.</p>
-          <pre><code data-trim contenteditable style="font-size: 18px;" class="javascript">Reveal.addEventListener( 'customevent', function() {
+          <pre><code class="javascript" data-trim contenteditable style="font-size: 18px">Reveal.addEventListener( 'customevent', function() {
   console.log( '"customevent" has fired' );
 } );
 </code></pre>

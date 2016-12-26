@@ -1,30 +1,30 @@
-# reveal.js + Jade
+# reveal.js + Pug
 
 A framework for easily creating beautiful presentations using HTML. [Check out the live demo](http://jlengstorf.github.io/reveal.js-jade/). (Compare it to the [reveal.js demo](http://lab.hakim.se/reveal-js/))
 
 [Reveal.js](https://github.com/hakimel/reveal.js) was built by [Hakim El Hattab](https://github.com/hakimel/).
 
-Later,[Jason Lengstorf](https://lengstorf.com/) — because he's too lazy to write out HTML longhand —  ported markup authoring to [Jade](http://jade-lang.com).
+Later,[Jason Lengstorf](https://lengstorf.com/) — because he's too lazy to write out HTML longhand —  ported markup authoring to [Pug](https://pugjs.org).
 
 ## Documentation
 This project is identical to the original [reveal.js](https://github.com/hakimel/reveal.js) in every way except authoring markup.
 
-### Using Jade
+### Using Pug
 
-See [Jade's documentation](http://jade-lang.com/reference/).
+See [Pug's documentation](https://pugjs.org).
 
 ### Using Reveal.js
 
 See the [reveal.js documentation](https://github.com/hakimel/reveal.js).
 
-## Working with Reveal.js + Jade
+## Working with Reveal.js + Pug
 
-**To edit your slideshow markup, edit `templates/index.jade`.** While you *can* edit `index.html` and nothing will break, any changes made to that file will be overridden when changes are made to a Jade file.
+**To edit your slideshow markup, edit `templates/index.pug`.** While you *can* edit `index.html` and nothing will break, any changes made to that file will be overridden when changes are made to a Pug file.
 
 
 ### Quick Start
 
-To get up and running with Reveal.js + Jade, clone the repo and install dependencies:
+To get up and running with Reveal.js + Pug, clone the repo and install dependencies:
 
 ```console
 git clone git@github.com:jlengstorf/reveal.js-jade.git
@@ -43,13 +43,13 @@ Open `http://0.0.0.0:8000/` in your browser to see the [demo presentation](http:
 
 ### Creating Your Own Presentation
 
-To create your own slideshow, edit `templates/index.jade`.
+To create your own slideshow, edit `templates/index.pug`.
 
-**NOTE:** Editing Jade templates is hooked up to the `watch` task in Grunt, and your changes will be automatically recompiled whenever you save. If you have the [livereload extension](http://livereload.com/extensions/) installed, changes will appear automatically as you save.
+**NOTE:** Editing Pug templates is hooked up to the `watch` task in Grunt, and your changes will be automatically recompiled whenever you save. If you have the [livereload extension](http://livereload.com/extensions/) installed, changes will appear automatically as you save.
 
-Inside `templates/index.jade`, you are only required to add one line of code:
+Inside `templates/index.pug`, you are only required to add one line of code:
 
-```jade
+```pug
 extends layouts/presentation
 ```
 
@@ -60,7 +60,7 @@ This presentation won't have any of your info in it, but it will display a prese
 
 To add slides, override the default `slides` block in the layout:
 
-```jade
+```pug
 extends layouts/presentation
 
 block slides
@@ -69,7 +69,7 @@ block slides
 		h1 Slide Title
 		p Slide text here.
 
-	//- Use standard Jade to create slides as well
+	//- Use standard Pug to create slides as well
 	section
 		h1 Slide Title
 		p Slide text here.
@@ -82,7 +82,7 @@ The `slide` mixin is most handy if you're using Markdown. See the next section f
 
 To author slides in Markdown:
 
-```jade
+```pug
 extends layouts/presentation
 
 block slides
@@ -96,7 +96,7 @@ block slides
 		var foo = 'bar';
 		```
 
-	//- Use standard Jade to create slides as well
+	//- Use standard Pug to create slides as well
 	section
 		script(type="text/template")
 			# Slide Title
@@ -114,7 +114,7 @@ This works because the `slide` mixin checks for `data-markdown` and auto-wraps t
 
 Adding attributes works as expected, whether you're using the `slide` mixin or not:
 
-```jade
+```pug
 extends layouts/presentation
 
 block slides
@@ -124,7 +124,7 @@ block slides
 
 		Slide text goes here.
 
-	//- Use standard Jade to create slides as well
+	//- Use standard Pug to create slides as well
 	section(data-background="#000000" data-transition="slide")
 		h1 Slide Title
 		p Slide text here.
@@ -134,7 +134,7 @@ block slides
 
 The `title` block is designed to allow easy updating of the `tite`, as well as the `description` and `author` meta tags.
 
-```jade
+```pug
 extends layouts/presentation
 
 block title
@@ -150,7 +150,7 @@ block slides
 
 To change the presentation theme, override the default in the `theme` block:
 
-```jade
+```pug
 extends layouts/presentation
 
 block theme
@@ -164,7 +164,7 @@ block slides
 
 If you need to add additional stylesheets (such as an icon set or hosted fonts), use the `styles` block:
 
-```jade
+```pug
 extends layouts/presentation
 
 block styles
@@ -182,7 +182,7 @@ block slides
 
 The default scripts loaded are `lib/js/head.min.js` and `js/reveal.js`. Additionally, `Reveal.initialize()` is called with the defaults specified in the demo. To override these settings, simply override using the `defaultscripts` block:
 
-```jade
+```pug
 extends layouts/presentation
 
 block slides
@@ -212,7 +212,7 @@ block defaultscripts
 
 If you want to add additional scripts (and don't want to set them as Reveal.js dependencies), you can use the `scripts` block:
 
-```jade
+```pug
 extends layouts/presentation
 
 block slides
@@ -227,7 +227,7 @@ block scripts
 
 For additional HTML that's not related to Reveal.js, you can add it using the `extras` block. For example, you may want to add a footer to your presenations that persists across all slides:
 
-```jade
+```pug
 extends layouts/presentation
 
 block slides
@@ -237,7 +237,7 @@ block extras
 	footer
 		ul.inline
 			li.
-				&ldquo;Even Better Presentation with Reveal.js + Jade&rdquo;
+				&ldquo;Even Better Presentation with Reveal.js + Pug&rdquo;
 				by #[a(href='http://lengstorf.com') Jason Lengstorf]
 			li
 				a(href="https://twitter.com/jlengstorf").

@@ -3,19 +3,19 @@ extends layouts/presentation
 
 //- Customize the title, meta description, and author using this block.
 block title
-  title reveal.js + Jade - The HTML Presentation Framework
+  title reveal.js + Pug - The HTML Presentation Framework
   meta(
     name="description"
-    content="A framework for easily creating beautiful presentations using HTML by @hakimel. Ported to Jade by @jlengstorf."
+    content="A framework for easily creating beautiful presentations using HTML by @hakimel. Ported to Pug by @jlengstorf."
   )
   meta(name="author" content="Hakim El Hattab")
 
 
-//- Add your slides here. See templates/includes/_mixins.jade for information 
+//- Add your slides here. See templates/includes/_mixins.pug for information 
 //- on how `+slide` works.
 block slides
   +slide
-    h1 Reveal.js + Jade
+    h1 Reveal.js + Pug
     h3 A shortcut for faster slideshow authoring.
     p
       small.
@@ -23,7 +23,7 @@ block slides
         #[a(href="https://twitter.com/hakimel") @hakimel]
     p
       small.
-        Ported to #[a(href="http://jade-lang.com") Jade] by 
+        Ported to #[a(href="https://pugjs.org") Pug] by 
         #[a(href="http://lengstorf.com") Jason Lengstorf] / 
         #[a(href="https://twitter.com/jlengstorf") jlengstorf]
 
