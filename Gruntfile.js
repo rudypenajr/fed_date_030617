@@ -96,7 +96,8 @@ module.exports = function(grunt) {
 					doctype: 'html'
 				},
 				files: {
-					"index.html": "templates/index.jade"
+					"index.html": "templates/index.jade",
+					"demo.html": "templates/demo.jade"
 				}
 			}
 		},
