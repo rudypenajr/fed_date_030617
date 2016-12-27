@@ -2,14 +2,11 @@
 extends layouts/presentation
 
 //- Customize the title, meta description, and author using this block.
-block title
-  title reveal.js + Pug - The HTML Presentation Framework
-  meta(
-    name="description"
-    content="A framework for easily creating beautiful presentations using HTML by @hakimel. Ported to Pug by @jlengstorf."
-  )
-  meta(name="author" content="Hakim El Hattab")
-
+block append config
+  -
+    config.title = 'reveal.js + Pug - The HTML Presentation Framework';
+    config.description = 'A framework for easily creating beautiful presentations using HTML by @hakimel. Ported to Pug by @jlengstorf.';
+  -
 
 //- Add your slides here. See templates/includes/_mixins.pug for information 
 //- on how `+slide` works.
