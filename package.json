@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/hakimel/fed_date_030617.git"
+    "url": "git://github.com/rudypenajr/fed_date_030617.git"
   },
   "engines": {
     "node": ">=4.0.0"

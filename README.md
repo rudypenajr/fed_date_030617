@@ -4,7 +4,9 @@ A framework for easily creating beautiful presentations using HTML. [Check out t
 
 [Reveal.js](https://github.com/hakimel/reveal.js) was built by [Hakim El Hattab](https://github.com/hakimel/).
 
-Later,[Jason Lengstorf](https://lengstorf.com/) — because he's too lazy to write out HTML longhand —  ported markup authoring to [Pug](https://pugjs.org).
+Thanks to, [Jason Lengstorf](https://lengstorf.com/) — because he's too lazy to write out HTML longhand —  ported markup authoring to [Pug](https://pugjs.org).
+
+Thus, I was to lazy to recreate and solves what I need for presenting.
 
 ## Documentation
 This project is identical to the original [reveal.js](https://github.com/hakimel/reveal.js) in every way except authoring markup.
