@@ -8,11 +8,67 @@ block append config
     config.description = 'A framework for easily creating beautiful presentations using HTML by @hakimel. Ported to Pug by @jlengstorf.';
   -
 
-//- Add your slides here. See templates/includes/_mixins.pug for information 
+//- Add your slides here. See templates/includes/_mixins.pug for information
 //- on how `+slide` works.
 block slides
-  +slide
-    | Slide 1
+  +slide(data-transition="fade")
+    h1.letter-spacing_05 Machine Learning
+    h3.letter-spacing_05 Da Basics
 
-  +slide
-    | Slide 2
+  +slide(data-background="url(images/8lc39s0078.jpg)" data-transition="fade")
+    //- p.fragment.grow grow
+    //- p.fragment.shrink shrink
+    //- p.fragment.fadout fade-out
+    //- p.fragment.currenvisible visible only once
+    div.belly
+      h2.fragment.fadup FED
+      h2.fragment.fadup Hybrid Cloud Solutions
+
+  +slide(data-transition="fade")
+    section
+      h3.letter-spacing_05 Deep Learning
+      p vs
+      h3.letter-spacing_05 Machine Learning
+      p vs
+      h3.letter-spacing_05 Artificial Intelligence
+
+    section(data-transition="fade")
+      img(
+        src="../images/AI_DeepLearning.jpg"
+        alt="Deep Learning vs Machine Learning, Artificial Intelligence"
+        style="width: 100%; margin: 0;"
+      )
+      p.source Source:
+        a(class='link' href='https://leonardoaraujosantos.gitbooks.io/artificial-inteligence/content/chapter1.html')  https://leonardoaraujosantos.gitbooks.io/artificial-inteligence/content/chapter1.html
+
+  +slide(data-transition="fade")
+    h3 History of Machine Learning
+    img(
+      src="../images/HistoryAI.png"
+      alt="History of Machine Learning"
+      style="width: 100%; margin: 0;"
+    )
+    p.source Source:
+      a(class='link' href='https://leonardoaraujosantos.gitbooks.io/artificial-inteligence/content/chapter1.html')  https://leonardoaraujosantos.gitbooks.io/artificial-inteligence/content/chapter1.html
+
+  +slide(data-transition="fade")
+    section(data-transition="fade")
+      // - Why is ML so hot right now?
+      img(
+        src="../images/giphy.gif"
+        alt="History of Machine Learning"
+        style="width: 100%; margin: 0;"
+      )
+
+    section(data-transition="fade")
+      h1.uppercase Data
+      h1.uppercase Data
+      h1.uppercase Data
+
+    section(data-transition="fade")
+      h1.uppercase Thanks Gamers!
+      img(
+        src="../images/gpu.jpg"
+        alt="History of Machine Learning"
+        style="width: 100%; margin: 0;"
+      )

@@ -1,5 +1,5 @@
 {
-  "name": "reveal.js",
+  "name": "fed_date_030617",
   "version": "3.3.0",
   "description": "The HTML Presentation Framework",
   "homepage": "http://lab.hakim.se/reveal-js",
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/hakimel/reveal.js.git"
+    "url": "git://github.com/hakimel/fed_date_030617.git"
   },
   "engines": {
     "node": ">=4.0.0"

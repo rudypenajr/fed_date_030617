@@ -1,0 +1,38 @@
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  text-shadow: 4px 4px 16px rgba(150, 150, 150, 0.60);
+  text-transform: none !important;
+}
+
+.reveal h1.letter-spacing_05,
+.reveal h2.letter-spacing_05,
+.reveal h3.letter-spacing_05 {
+  letter-spacing: 4.2px;
+}
+
+.reveal h1.letter-spacing_10,
+.reveal h2.letter-spacing_10,
+.reveal h3.letter-spacing_10 {
+  letter-spacing: 10px;
+}
+
+.reveal h1.uppercase,
+.reveal h2.uppercase,
+.reveal h3.uppercase {
+  text-shadow: 4px 4px 16px rgba(150, 150, 150, 0.60);
+  text-transform: uppercase;
+}
+
+.reveal .slide-background {
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+.reveal p.source {
+  font-size: 22px;
+}
+
+.reveal .belly {
+  margin-top: 150px;
+}

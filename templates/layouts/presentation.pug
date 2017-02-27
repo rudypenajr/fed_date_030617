@@ -3,16 +3,14 @@ include ../includes/_mixins
 block config
   -
     const config = {
-      title: 'Reveal.js + Pug',
-      description: 'A framework for easily creating beautiful presentations using HTML.',
+      title: 'Da Basics: Machine Learning',
+      description: 'High Level Introduction to Machine Learning',
       author: {
-        name: 'Hakim El Hattab',
-        email: 'hakim.elhattab@gmail.com',
-        link: 'http://hakim.se',
-        twitter: 'hakimel',
-        github: 'hakimel',
+        name: 'Rudy Pena',
+        email: 'penar@us.ibm.com',
+        github: 'penar',
       },
-      theme: 'black',
+      theme: 'sky',
     };
   -
 
@@ -42,6 +40,7 @@ html
 
     //- Syntax highlighting
     link(rel="stylesheet" href="lib/css/zenburn.css")
+    link(rel="stylesheet" href="lib/css/main.css")
 
     //- Add extra styles using this block
     block styles
@@ -68,12 +67,12 @@ html
             h3= config.description
             p
               small.
-                Created by #[a(href= config.author.link)= config.author.name] / 
+                Created by #[a(href= config.author.link)= config.author.name] /
                 #[a(href="https://twitter.com/" + config.author.twitter)= "@" + config.author.twitter]
             p
               small.
-                Ported to #[a(href="https://pugjs.org") Pug] by 
-                #[a(href="http://lengstorf.com") Jason Lengstorf] / 
+                Ported to #[a(href="https://pugjs.org") Pug] by
+                #[a(href="http://lengstorf.com") Jason Lengstorf] /
                 #[a(href="https://twitter.com/jlengstorf") jlengstorf]
 
 
